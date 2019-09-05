@@ -1,0 +1,27 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="inputItem">
+    <text catchtap="addTodos">＋</text>
+    <input type="text" class="Input" placeholder="input..." value="{{input}}" bindinput="setInput" bindconfirm="addTodos" auto-focus></input>
+  </view>
+  <block wx:if="{{todos.length}}">
+    <view class="todos">
+        <view class="item {{item.completed?'completed':''}}" wx:for="{{todos}}" wx:key="todos">
+          <icon type="{{item.completed?'success':'circle'}}" size="22" data-index="{{index}}"  catchtap="changeTodosStatus"></icon>
+          <text>{{item.name}}</text>
+          <icon type="clear" size="16" data-index="{{index}}" catchtap="removeTodos"></icon>
+        </view>
+      </view>
+      <view class="footer">
+        <text bindtap="toggleAll">Toggle all</text>
+        <text>{{leftCount}} items left</text>
+        <text bindtap="ClearCommpleted">Clear Commpleted</text>
+      </view>
+  </block>
+  <block wx:else>
+    <view class="empty">
+      <text class="title">Congratulations!</text>
+      <text class="content">There's no more work left.</text>
+    </view>
+  </block>
+</view>

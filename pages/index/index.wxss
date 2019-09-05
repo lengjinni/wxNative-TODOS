@@ -1,0 +1,76 @@
+/**index.wxss**/
+.container {
+  border-top: 1rpx solid #dedede;
+  padding: 20rpx;
+}
+.inputItem {
+  display: flex;
+  height: 80rpx;
+  border-radius: 10rpx;
+  border: 1rpx solid #dedede;
+  margin: 10rpx;
+  box-shadow: 0 0 5rpx rgba(0,0,0,.1);
+  padding: 0 10rpx;
+}
+.inputItem text {
+  font-size: 70rpx;
+  color: #dedede;
+  position: relative;
+  top: -10rpx;
+}
+.Input {
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #666;
+}
+.todos {
+  border: 1px solid #dedede;
+  margin: 20rpx 10rpx;
+  border-radius: 10rpx;
+}
+.todos .item {
+  padding: 20rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #dedede;
+}
+.todos .item.completed text {
+  color: #999;
+  text-decoration: line-through;
+}
+.todos .item:last-child {
+  border-bottom: none;
+}
+.todos .item text {
+  margin-left: 15rpx;
+  color: #666;
+  flex: 1;
+  font-size: 35rpx;
+}
+.footer {
+  color: #888;
+  display: flex;
+  justify-content: space-around;
+  font-size: 25rpx;
+  padding: 10rpx;
+}
+.footer text {
+  flex: 1;
+}
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+}
+
+.empty .title {
+  font-size: 60rpx;
+  margin: 200rpx 50rpx 50rpx;
+  color: #444;
+}
+
+.empty .content {
+  color: #666;
+  text-align: center;
+}
